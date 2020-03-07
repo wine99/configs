@@ -1,0 +1,68 @@
+{
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "[vue]": {
+        "editor.tabSize": 2
+    },
+    "[wxml]": {
+        "editor.tabSize": 2
+    },
+    "[wxss]": {
+        "editor.tabSize": 2
+    },
+    
+
+    "window.zoomLevel": 0,
+    "files.eol": "\n",
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript"
+    },
+    "emmet.includeLanguages": {
+        "wxml": "html"
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.sideBar.location": "left",
+    "editor.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
+    "editor.mouseWheelZoom": true,
+    "editor.suggestSelection": "first",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+
+
+    "minapp-vscode.disableAutoConfig": true,
+
+
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "vue"
+    ],
+
+
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.clearPreviousOutput": true,
+
+
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.smartcase": true,
+    "vim.useSystemClipboard": true,
+    "vim.showcmd": true,
+    "vim.normalModeKeyBindingsNonRecursive": [{
+        "before": ["C-s"],
+        "commands": [":w"]
+    }, {
+        "before": ["C-w"],
+        "commands": [":q"]
+    }]
+}
