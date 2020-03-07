@@ -8,7 +8,7 @@
 3. EditorConfig for VS Code
 4. Remote - SSH
 5. Remote - SSH: Editing Configuration Files
-6. TODO Highlight
+6. Todo Tree
 7. Vim
 8. vscode-icons
 
