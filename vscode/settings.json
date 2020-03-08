@@ -64,5 +64,8 @@
     }, {
         "before": ["C-w"],
         "commands": [":q"]
-    }]
+    }],
+
+
+    "todo-tree.tree.showScanModeButton": false
 }
