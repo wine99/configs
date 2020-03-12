@@ -49,6 +49,7 @@
 
     "code-runner.saveFileBeforeRun": true,
     "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true,
 
 
     "vim.easymotion": true,
@@ -67,5 +68,12 @@
     }],
 
 
-    "todo-tree.tree.showScanModeButton": false
+    "todo-tree.tree.showScanModeButton": false,
+
+    
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "yapf",
+    "python.dataScience.sendSelectionToInteractiveWindow": true
 }
