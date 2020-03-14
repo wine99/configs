@@ -75,5 +75,14 @@
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
     "python.formatting.provider": "yapf",
-    "python.dataScience.sendSelectionToInteractiveWindow": true
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "python.dataScience.askForKernelRestart": false,
+
+
+    "cSpell.userWords": [
+        "abline",
+        "hstack",
+        "numpy",
+        "pyplot"
+    ]
 }
