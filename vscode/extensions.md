@@ -11,6 +11,7 @@
 6. Todo Tree
 7. Vim
 8. vscode-icons
+9. Code Spell Checker
 
 ### 默认禁用
 1. C/C++
