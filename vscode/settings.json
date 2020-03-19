@@ -14,7 +14,7 @@
     "[wxss]": {
         "editor.tabSize": 2
     },
-    
+
 
     "window.zoomLevel": 0,
     "files.eol": "\n",
@@ -70,7 +70,7 @@
 
     "todo-tree.tree.showScanModeButton": false,
 
-    
+
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
@@ -80,9 +80,18 @@
 
 
     "cSpell.userWords": [
+        "Docment",
+        "Zijun",
         "abline",
+        "bilibili",
         "hstack",
         "numpy",
-        "pyplot"
+        "pyplot",
+        "vant",
+        "weapp",
+        "wechat",
+        "weixin",
+        "wxss",
+        "xiaoke"
     ]
 }
