@@ -77,21 +77,34 @@
     "python.formatting.provider": "yapf",
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "python.dataScience.askForKernelRestart": false,
+    "python.jediEnabled": true,
 
 
     "cSpell.userWords": [
         "Docment",
+        "ENDM",
+        "Softmax",
         "Zijun",
         "abline",
         "bilibili",
+        "dirent",
         "hstack",
+        "logined",
         "numpy",
+        "opendir",
         "pyplot",
+        "sklearn",
+        "swiper",
         "vant",
         "weapp",
         "wechat",
         "weixin",
+        "wxml",
         "wxss",
         "xiaoke"
+    ],
+    "cSpell.enableFiletypes": [
+        "masm",
+        "wxml"
     ]
 }

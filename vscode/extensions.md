@@ -8,14 +8,18 @@
 3. EditorConfig for VS Code
 4. Remote - SSH
 5. Remote - SSH: Editing Configuration Files
-6. Todo Tree
-7. Vim
-8. vscode-icons
-9. Code Spell Checker
+6. Remote - WSL
+7. Todo Tree
+8. Vim
+9. vscode-icons
+10. Code Spell Checker
+11. Visual Studio IntelliCode
+12. Path Intellisense
+13. LeetCode
 
 ### 默认禁用
 1. C/C++
-2. MASM
+2. Live Server
 
 
 ### 工作区
@@ -28,6 +32,7 @@
 1. Anaconda Extension Pack
 2. Python
 3. YAML
+4. MagicPython
 
 #### web
 1. Bootstrap v4 Snippets
