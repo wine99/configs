@@ -16,10 +16,13 @@
 11. Visual Studio IntelliCode
 12. Path Intellisense
 13. LeetCode
+14. vscode-scheme
+15. open in browser
 
 ### 默认禁用
 1. C/C++
 2. Live Server
+3. MASM
 
 
 ### 工作区

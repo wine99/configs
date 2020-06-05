@@ -77,9 +77,24 @@
     "python.formatting.provider": "yapf",
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "python.dataScience.askForKernelRestart": false,
-    "python.jediEnabled": true,
+    "python.jediEnabled": false,
 
 
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "f:\\code\\leetcode",
+    "leetcode.showDescription": "Both",
+    "leetcode.hint.commandShortcut": false,
+
+
+    "liveServer.settings.donotShowInfoMsg": true,
+
+    "terminal.integrated.shell.windows": "C:\\Users\\yu131\\.dotnet\\tools\\pwsh.exe",
+
+
+    "cSpell.enableFiletypes": [
+        "masm",
+        "wxml"
+    ],
     "cSpell.userWords": [
         "Docment",
         "ENDM",
@@ -89,22 +104,20 @@
         "bilibili",
         "dirent",
         "hstack",
+        "leetcode",
         "logined",
         "numpy",
+        "nums",
         "opendir",
         "pyplot",
         "sklearn",
         "swiper",
+        "swipers",
         "vant",
         "weapp",
         "wechat",
         "weixin",
         "wxml",
-        "wxss",
-        "xiaoke"
-    ],
-    "cSpell.enableFiletypes": [
-        "masm",
-        "wxml"
+        "wxss"
     ]
 }
