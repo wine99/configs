@@ -3,7 +3,7 @@
 ## 全局
 
 ### 默认启用
-1. Chinese (Simplified) Language Pack for Visual Studio Code
+1. Better Comments
 2. Code Runner
 3. EditorConfig for VS Code
 4. Remote - SSH
@@ -16,8 +16,11 @@
 11. Visual Studio IntelliCode
 12. Path Intellisense
 13. LeetCode
-14. vscode-scheme
+14. Auto Rename Tag
 15. open in browser
+16. Magic Racket
+17. Highlight Matching Tag
+18. REST Client
 
 ### 默认禁用
 1. C/C++
@@ -43,6 +46,7 @@
 3. ESLint
 4. HTML Snippets
 5. Vetur
+6. CSS Peek
 
 #### node
 1. Docker
