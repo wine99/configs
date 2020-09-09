@@ -1,7 +1,7 @@
 " plugs {{{
-call plug#begin('D:\Program Files (x86)\Vim\vim81\plugged')
-Plug 'liuchengxu/space-vim-theme'
-call plug#end()
+" call plug#begin('D:\Program Files (x86)\Vim\vim81\plugged')
+" Plug 'liuchengxu/space-vim-theme'
+" call plug#end()
 
 " }}}
 
@@ -35,7 +35,7 @@ set nowrapscan
 
 set number
 set relativenumber
-set cursorline
+" set cursorline
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -49,7 +49,7 @@ set expandtab
 
 
 " GUI {{{
-colorscheme space_vim_theme
+" colorscheme space_vim_theme
 
 " 窗口大小
 " set lines=35 columns=140
@@ -69,3 +69,4 @@ set nolist
 set guifont=Source\ Code\ Pro:h12
 
 " }}}
+
