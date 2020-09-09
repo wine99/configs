@@ -52,10 +52,10 @@ set expandtab
 colorscheme space_vim_theme
 
 " 窗口大小
-set lines=35 columns=140
+" set lines=35 columns=140
 " 分割出来的窗口位于当前窗口下边/右边
-set splitbelow
-set splitright
+" set splitbelow
+" set splitright
 "不显示工具/菜单栏
 set guioptions-=T
 "set guioptions-=m

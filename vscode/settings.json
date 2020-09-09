@@ -14,9 +14,11 @@
     "[wxss]": {
         "editor.tabSize": 2
     },
+    "[racket]": {
+        "editor.autoClosingBrackets": "never"
+    },
 
 
-    "terminal.integrated.shell.windows": "E:\\programs\\pwsh\\7\\pwsh.exe",
     "window.zoomLevel": 0,
     "files.eol": "\n",
     "files.associations": {
