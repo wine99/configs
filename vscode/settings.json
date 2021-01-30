@@ -14,10 +14,15 @@
     "[wxss]": {
         "editor.tabSize": 2
     },
-    "[racket]": {
-        "editor.autoClosingBrackets": "never"
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
     },
 
+    "cmake.configureOnOpen": true,
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
 
     "window.zoomLevel": 0,
     "files.eol": "\n",
@@ -51,7 +56,6 @@
 
 
     "code-runner.saveFileBeforeRun": true,
-    "code-runner.clearPreviousOutput": true,
     "code-runner.runInTerminal": true,
 
 
@@ -74,6 +78,7 @@
     "todo-tree.tree.showScanModeButton": false,
 
 
+    "python.languageServer": "Pylance",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
@@ -100,6 +105,7 @@
         "Docment",
         "ENDM",
         "Softmax",
+        "Targs",
         "Zijun",
         "abline",
         "bilibili",
@@ -111,9 +117,12 @@
         "nums",
         "opendir",
         "pyplot",
+        "reassembler",
+        "sicp",
         "sklearn",
         "swiper",
         "swipers",
+        "unassembled",
         "vant",
         "weapp",
         "wechat",

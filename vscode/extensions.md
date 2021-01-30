@@ -2,7 +2,7 @@
 
 ## 全局
 
-### 默认启用
+### 常用的
 1. Better Comments
 2. Code Runner
 3. EditorConfig for VS Code
@@ -10,22 +10,17 @@
 5. Remote - SSH: Editing Configuration Files
 6. Remote - WSL
 7. Todo Tree
-8. Vim
+8. Path Intellisense
 9. vscode-icons
 10. Code Spell Checker
-11. Visual Studio IntelliCode
-12. Path Intellisense
-13. LeetCode
-14. Auto Rename Tag
-15. open in browser
-16. Magic Racket
-17. Highlight Matching Tag
-18. REST Client
+11. Auto Rename Tag
+12. Magic Racket
+13. Highlight Matching Tag
+14. REST Client
 
-### 默认禁用
-1. C/C++
-2. Live Server
-3. MASM
+### 其他的
+1. Live Server
+2. MASM
 
 
 ### 工作区
@@ -35,10 +30,10 @@
 2. minapp
 
 #### python
-1. Anaconda Extension Pack
-2. Python
-3. YAML
-4. MagicPython
+1. Python
+2. YAML
+3. MagicPython
+4. Pylance (choose one between 3 and 4)
 
 #### web
 1. Bootstrap v4 Snippets
@@ -49,7 +44,5 @@
 6. CSS Peek
 
 #### node
-1. Docker
-2. ESLint
-3. vscode-proto3
-
+1. ESLint
+2. vscode-proto3

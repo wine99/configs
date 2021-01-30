@@ -1,72 +1,105 @@
-" plugs {{{
-" call plug#begin('D:\Program Files (x86)\Vim\vim81\plugged')
-" Plug 'liuchengxu/space-vim-theme'
-" call plug#end()
+" Comments in Vimscript start with a `"`.
 
-" }}}
+" If you open this file in Vim, it'll be syntax highlighted for you.
 
-
-" Basic {{{
-" vim 文件折叠方式为 marker
-augroup ft_vim
-    au!
-    au FileType vim setlocal foldmethod=marker
-augroup END
-
+" Vim is based on Vi. Setting `nocompatible` switches from the default
+" Vi-compatibility mode and enables useful Vim functionality. This
+" configuration option turns out not to be necessary for the file named
+" '~/.vimrc', because Vim automatically enters nocompatible mode if that file
+" is present. But we're including it here just in case this config file is
+" loaded some other way (e.g. saved as `foo`, and then Vim started with
+" `vim -u foo`).
 set nocompatible
-set noundofile
+
+" Turn on syntax highlighting.
+syntax on
+
+" Disable the default Vim startup message.
+set shortmess+=I
+
+" Show line numbers.
+set number
+
+" This enables relative line numbering mode. With both number and
+" relativenumber enabled, the current line shows the true line number, while
+" all other lines (above and below) are numbered relative to the current line.
+" This is useful because you can tell, at a glance, what count is needed to
+" jump up or down to a particular line, by {count}k to go up or {count}j to go
+" down.
+set relativenumber
+
+" Always show the status line at the bottom, even if you only have one window open.
+set laststatus=2
+
+" The backspace key has slightly unintuitive behavior by default. For example,
+" by default, you can't backspace before the insertion point set with 'i'.
+" This configuration makes backspace behave more reasonably, in that you can
+" backspace over anything.
+set backspace=indent,eol,start
+
+" By default, Vim doesn't let you hide a buffer (i.e. have a buffer that isn't
+" shown in any window) that has unsaved changes. This is to prevent you from "
+" forgetting about unsaved changes and then quitting e.g. via `:qa!`. We find
+" hidden buffers helpful enough to disable this protection. See `:help hidden`
+" for more information on this.
+set hidden
+
+" This setting makes search case-insensitive when all characters in the string
+" being searched are lowercase. However, the search becomes case-sensitive if
+" it contains any capital letters. This makes searching more convenient.
+set ignorecase
+set smartcase
+
+" Enable searching as you type, rather than waiting till you press enter.
+set incsearch
+
+" Unbind some useless/annoying default key bindings.
+nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
+
+" Disable audible bell because it's annoying.
+set noerrorbells visualbell t_vb=
+
+" Enable mouse support. You should avoid relying on this too much, but it can
+" sometimes be convenient.
+set mouse+=a
+
+" Try to prevent bad habits like using the arrow keys for movement. This is
+" not the only possible bad habit. For example, holding down the h/j/k/l keys
+" for movement, rather than using more efficient movement commands, is also a
+" bad habit. The former is enforceable through a .vimrc, while we don't know
+" how to prevent the latter.
+" Do this in normal mode...
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
+" ...and in insert mode
+inoremap <Left>  <ESC>:echoe "Use h"<CR>
+inoremap <Right> <ESC>:echoe "Use l"<CR>
+inoremap <Up>    <ESC>:echoe "Use k"<CR>
+inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+
+call plug#begin('~/.config/nvim/plugged')
+Plug 'tpope/vim-sensible'
+Plug 'easymotion/vim-easymotion'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'justinmk/vim-sneak'
+Plug 'mileszs/ack.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'SirVer/ultisnips'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
+call plug#end()
+
+
+set smarttab
+set expandtab
+set autoindent
+
 set nobackup
 set noswapfile
 set history=1024
-set autochdir
-set whichwrap=b,s,<,>,[,]
-set backspace=indent,eol,start whichwrap+=<,>,[,]
-set clipboard+=unnamed
-set winaltkeys=no
-set nobomb
-set vb t_vb =
-set showmatch
-set showcmd
 
-set ignorecase
-set incsearch
-set nohls
-set nowrapscan
-
-set number
-set relativenumber
-" set cursorline
-
-filetype plugin indent on
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab
-
-" }}}
-
-
-" GUI {{{
-" colorscheme space_vim_theme
-
-" 窗口大小
-" set lines=35 columns=140
-" 分割出来的窗口位于当前窗口下边/右边
-" set splitbelow
-" set splitright
-"不显示工具/菜单栏
-set guioptions-=T
-"set guioptions-=m
-"set guioptions-=L
-"set guioptions-=r
-"set guioptions-=b
-" 使用内置 tab 样式而不是 gui
-set guioptions-=e
-set nolist
-" set listchars=tab:?\ ,eol:?,trail:·,extends:>,precedes:<
-set guifont=Source\ Code\ Pro:h12
-
-" }}}
-
+set guifont=Source\ Code\ Pro\ 12
