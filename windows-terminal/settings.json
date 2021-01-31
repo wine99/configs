@@ -69,7 +69,7 @@
                 "fontSize" : 11,
                 "historySize" : 9001,
                 // "icon" : "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                // "padding" : "0, 0, 0, 0",
+                "padding" : "12, 10, 0, 10",
                 "snapOnInput" : true,
                 "useAcrylic" : false
             },

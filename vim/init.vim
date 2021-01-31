@@ -54,7 +54,9 @@ set smartcase
 set incsearch
 
 " Unbind some useless/annoying default key bindings.
-nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
+" 'Q' in normal mode enters Ex mode. You almost never want this.
+nmap Q :q<CR>
+nmap S :w<CR>
 
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb=
@@ -81,7 +83,9 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'mhartington/oceanic-next'
 Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
 Plug 'easymotion/vim-easymotion'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -92,6 +96,18 @@ Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 call plug#end()
+
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+colorscheme OceanicNext
+let g:airline_theme='oceanicnext'
+hi Normal guibg=NONE ctermbg=NONE
+hi LineNr guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 
 set smarttab
