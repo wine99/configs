@@ -110,9 +110,13 @@ hi SignColumn guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 
-set smarttab
 set expandtab
+set smarttab
+set tabstop=4
+set shiftwidth=0
+set softtabstop=0
 set autoindent
+set smartindent
 
 set nobackup
 set noswapfile

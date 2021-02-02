@@ -27,6 +27,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 
+source ~/.aliases
 
 #alias startssh="sudo service ssh --full-restart && ssh -fCNR 3333:localhost:2222 root@47.114.175.116"
 alias assh="autossh -fCNR 3333:localhost:2222 root@47.114.175.116"
@@ -43,3 +44,4 @@ export WORKON_HOME=$HOME/.virtualenvs
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 . /home/yzj/.local/bin/virtualenvwrapper.sh
 workon base
+

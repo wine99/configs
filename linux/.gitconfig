@@ -1,0 +1,6 @@
+[user]
+	email = yu1319324245@gmail.com
+	name = Zijun Yu
+[core]
+	quotepath = false
+	editor = nvim
