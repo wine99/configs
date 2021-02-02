@@ -118,9 +118,14 @@ ZSH_DISABLE_COMPFIX=true
 # colorls
 source $(dirname $(gem which colorls))/tab_complete.sh
 alias ls=colorls
+alias l="ls -lh"
+alias ll="ls -lAh"
+alias la="ls -lah"
 
 alias hz="history | fzf"
-#alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
+# alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
+alias mv="mv -i"
+alias cp="cp -i"
 
 export PATH=/mnt/e/wsl/ubuntu/apps/cheat:$PATH
 

@@ -117,5 +117,7 @@ set autoindent
 set nobackup
 set noswapfile
 set history=1024
+set undodir=~/.config/nvim/undodir
+set undofile
 
 set guifont=Source\ Code\ Pro\ 12
