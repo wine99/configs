@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(vi-mode git zsh-z zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,15 +118,16 @@ ZSH_DISABLE_COMPFIX=true
 # colorls
 source $(dirname $(gem which colorls))/tab_complete.sh
 alias ls=colorls
-alias l="ls -lh"
-alias ll="ls -lAh"
-alias la="ls -lah"
 
-alias hz="history | fzf"
-# alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
-alias mv="mv -i"
-alias cp="cp -i"
 
-export PATH=/mnt/e/wsl/ubuntu/apps/cheat:$PATH
+if [[ "$(hostname)" == "DESKTOP-PEK0JLI" ]]; then
+  # alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
+
+  export PATH=/mnt/e/wsl/ubuntu/apps/cheat:$PATH
+fi
+
+
+force_color_prompt=yes
 
 source ~/.profile
+

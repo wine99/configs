@@ -1,6 +1,10 @@
+alias up="cd .."
 alias l="ls -lh"
 alias ll="ls -lAh"
 alias la="ls -lah"
 alias mv="mv -i"
 alias cp="cp -i"
+alias nv="nvim"
+alias snv="sudo -E nvim"
 alias hz="history | fzf"
+alias fd=fdfind
