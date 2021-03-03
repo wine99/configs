@@ -39,6 +39,7 @@
         "source.fixAll.eslint": true
     },
     "editor.wordWrap": "on",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
 
 
     "cmake.configureOnOpen": true,
@@ -97,6 +98,8 @@
 
     "liveServer.settings.donotShowInfoMsg": true,
 
+
+    "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
@@ -169,7 +172,6 @@
             ]
         }
     ],
-    "latex-workshop.view.pdf.viewer": "browser",
 
 
     "cSpell.enableFiletypes": [
