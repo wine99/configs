@@ -83,23 +83,28 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+let maplocalleader=","
 
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'wlangstroth/vim-racket'
 Plug 'mhartington/oceanic-next'
-Plug 'tpope/vim-sensible'
+"Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdcommenter'
-Plug 'justinmk/vim-sneak'
+"Plug 'justinmk/vim-sneak'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'mileszs/ack.vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'SirVer/ultisnips'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
-Plug 'dense-analysis/ale'
+"Plug 'mileszs/ack.vim'
+"Plug 'junegunn/vim-easy-align'
+"Plug 'SirVer/ultisnips'
+Plug 'scrooloose/nerdtree'
+Plug 'Olical/conjure', {'tag': 'v4.16.0'}
+Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme', 'racket'] }
+"Plug 'dense-analysis/ale'
 call plug#end()
 
 
@@ -134,40 +139,40 @@ set guifont=Source\ Code\ Pro\ 12
 
 " ale
 " 始终开启标志列
-let g:ale_sign_column_always = 1
-let g:ale_set_highlights = 0
-" 自定义error和warning图标
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚡'
-" 在vim自带的状态栏中整合ale
-let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
-" 显示Linter名称,出错或警告等相关信息
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-" 普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
-nmap <Leader>p <Plug>(ale_previous_wrap)
-nmap <Leader>n <Plug>(ale_next_wrap)
-" <Leader>s触发/关闭语法检查
-nmap <Leader>s :ALEToggle<CR>
-" <Leader>d查看错误或警告的详细信息
-nmap <Leader>d :ALEDetail<CR>
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %{ALEGetStatusLine()}
-" To modify airline statusbar
-" modify ~/.vim/plugged/vim-airline/autoload/airline/extensions/ale.vim
-" <<<
-" let s:error_symbol = get(g:, 'airline#extensions#ale#error_symbol', 'E:')
-" let s:warning_symbol = get(g:, 'airline#extensions#ale#warning_symbol', 'W:')
-" >>>
-" let s:error_symbol = get(g:, 'airline#extensions#ale#error_symbol', '✗ ')
-" let s:warning_symbol = get(g:, 'airline#extensions#ale#warning_symbol', '⚡')
-" 不要实时的语法检查，只在文件保存时运行Linters
-" 文件内容发生变化时不进行检查
-" let g:ale_lint_on_text_changed = 'never'
-" 打开文件时不进行检查
-" let g:ale_lint_on_enter = 0
-" 对于Java如果安装在中文的系统上，错误和警告信息都会乱码
-" let g:ale_java_javac_options = '-encoding UTF-8  -J-Duser.language=en'
+"let g:ale_sign_column_always = 1
+"let g:ale_set_highlights = 0
+"" 自定义error和warning图标
+"let g:ale_sign_error = '✗'
+"let g:ale_sign_warning = '⚡'
+"" 在vim自带的状态栏中整合ale
+"let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
+"" 显示Linter名称,出错或警告等相关信息
+"let g:ale_echo_msg_error_str = 'E'
+"let g:ale_echo_msg_warning_str = 'W'
+"let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+"" 普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
+"nmap <Leader>p <Plug>(ale_previous_wrap)
+"nmap <Leader>n <Plug>(ale_next_wrap)
+"" <Leader>s触发/关闭语法检查
+"nmap <Leader>s :ALEToggle<CR>
+"" <Leader>d查看错误或警告的详细信息
+"nmap <Leader>d :ALEDetail<CR>
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}\ %{ALEGetStatusLine()}
+"" To modify airline statusbar
+"" modify ~/.vim/plugged/vim-airline/autoload/airline/extensions/ale.vim
+"" <<<
+"" let s:error_symbol = get(g:, 'airline#extensions#ale#error_symbol', 'E:')
+"" let s:warning_symbol = get(g:, 'airline#extensions#ale#warning_symbol', 'W:')
+"" >>>
+"" let s:error_symbol = get(g:, 'airline#extensions#ale#error_symbol', '✗ ')
+"" let s:warning_symbol = get(g:, 'airline#extensions#ale#warning_symbol', '⚡')
+"" 不要实时的语法检查，只在文件保存时运行Linters
+"" 文件内容发生变化时不进行检查
+"" let g:ale_lint_on_text_changed = 'never'
+"" 打开文件时不进行检查
+"" let g:ale_lint_on_enter = 0
+"" 对于Java如果安装在中文的系统上，错误和警告信息都会乱码
+"" let g:ale_java_javac_options = '-encoding UTF-8  -J-Duser.language=en'
 
 
 " NerdCommenter
@@ -179,3 +184,6 @@ else
     vmap <C-_> <leader>c<Space>
 endif
 
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
