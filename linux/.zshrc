@@ -120,14 +120,17 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 alias ls=colorls
 
 
+force_color_prompt=yes
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
 if [[ "$(hostname)" == "DESKTOP-PEK0JLI" ]]; then
-  # alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
+  alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
 
   export PATH=/mnt/e/wsl/ubuntu/apps/cheat:$PATH
 fi
 
 
-force_color_prompt=yes
-
 source ~/.profile
-
