@@ -32,8 +32,9 @@ source ~/.aliases
 #alias startssh="sudo service ssh --full-restart && ssh -fCNR 3333:localhost:2222 root@47.114.175.116"
 alias assh="autossh -fCNR 3333:localhost:2222 root@47.114.175.116"
 
-export PATH=/home/yzj/.local/bin:/mnt/e/wsl/ubuntu/apps/racket/bin:$PATH
+export PATH=$HOME/.yarn/bin:$HOME/.local/bin:$PATH
 export whost=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}')
+export XDG_CONFIG_HOME=$HOME/.config
 
 export DISPLAY=$whost:0
 #export DISPLAY=:0.0
@@ -42,6 +43,6 @@ export LIBGL_ALWAYS_INDIRECT=1
 #Virtualenvwrapper settings:
 export WORKON_HOME=$HOME/.virtualenvs
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-. /home/yzj/.local/bin/virtualenvwrapper.sh
+. $HOME/.local/bin/virtualenvwrapper.sh
 workon base
 
