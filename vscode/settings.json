@@ -20,12 +20,18 @@
     "[c]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
+    "[racket]": {
+        "editor.defaultFormatter": "evzen-wybitul.magic-racket",
+        "editor.autoClosingBrackets": "never"
+    },
 
     "files.eol": "\n",
     "files.associations": {
         "*.cjson": "jsonc",
         "*.wxss": "css",
-        "*.wxs": "javascript"
+        "*.wxs": "javascript",
+        "*.ss": "scheme",
+        "*.scm": "scheme"
     },
     "emmet.includeLanguages": {
         "wxml": "html"
@@ -77,7 +83,20 @@
     }],
 
 
+    "magic-racket.trace.server": "messages",
+
+
     "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
 
 
     "python.languageServer": "Pylance",
@@ -181,6 +200,7 @@
     "cSpell.userWords": [
         "Docment",
         "ENDM",
+        "Eigen",
         "Softmax",
         "Targs",
         "Zijun",
