@@ -30,7 +30,7 @@ fi
 source ~/.aliases
 
 #alias startssh="sudo service ssh --full-restart && ssh -fCNR 3333:localhost:2222 root@47.114.175.116"
-alias assh="autossh -fCNR 3333:localhost:2222 root@47.114.175.116"
+#alias assh="autossh -fCNR 3333:localhost:2222 root@47.114.175.116"
 
 export PATH=$HOME/.yarn/bin:$HOME/.local/bin:$PATH
 export whost=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}')
@@ -40,9 +40,11 @@ export DISPLAY=$whost:0
 #export DISPLAY=:0.0
 export LIBGL_ALWAYS_INDIRECT=1
 
+export HTTP_PROXY=http://$whost:7890
+export HTTPS_PROXY=http://$whost:7890
+
 #Virtualenvwrapper settings:
 export WORKON_HOME=$HOME/.virtualenvs
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 . $HOME/.local/bin/virtualenvwrapper.sh
 workon base
-
