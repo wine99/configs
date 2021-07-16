@@ -38,10 +38,26 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 export DISPLAY=$whost:0
 #export DISPLAY=:0.0
+#export NO_AT_BRIDGE=1
 export LIBGL_ALWAYS_INDIRECT=1
 
-export HTTP_PROXY=http://$whost:7890
-export HTTPS_PROXY=http://$whost:7890
+#export HTTP_PROXY=http://$whost:7890
+#export HTTPS_PROXY=http://$whost:7890
+#export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libproxychains.so.3
+alias proxy='
+    export https_proxy="socks5://${whost}:2080";
+    export http_proxy="socks5://${whost}:2080";
+    export all_proxy="socks5://${whost}:2080";
+    echo -e "Acquire::http::Proxy \"http://${whost}:2080\";" | sudo tee -a /etc/apt/apt.conf.d/proxy.conf > /dev/null;
+    echo -e "Acquire::https::Proxy \"http://${whost}:2080\";" | sudo tee -a /etc/apt/apt.conf.d/proxy.conf > /dev/null;
+'
+alias unproxy='
+    unset https_proxy;
+    unset http_proxy;
+    unset all_proxy;
+    sudo sed -i -e "/Acquire::http::Proxy/d" /etc/apt/apt.conf.d/proxy.conf;
+    sudo sed -i -e "/Acquire::https::Proxy/d" /etc/apt/apt.conf.d/proxy.conf;
+'
 
 #Virtualenvwrapper settings:
 export WORKON_HOME=$HOME/.virtualenvs

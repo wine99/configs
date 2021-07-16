@@ -19,9 +19,15 @@
             },
             "keys": "ctrl+shift+c"
         },
-        { "command": "paste", "keys": "ctrl+shift+v" },
+        {
+            "command": "paste",
+            "keys": "ctrl+shift+v"
+        },
         // Press Ctrl+Shift+F to open the search box
-        { "command": "find", "keys": "ctrl+shift+f" },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
         // Press Alt+Shift+D to open a new pane.
         // - "split": "auto" makes this pane open in the direction that provides the most surface area.
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
@@ -43,12 +49,15 @@
         [
             {
                 "commandline": "powershell.exe",
+                "fontFace": "Cascadia Code PL",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
+                "colorScheme": "Campbell",
                 "commandline": "cmd.exe",
+                "fontFace": "Cascadia Code PL",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
@@ -65,6 +74,7 @@
                 "source": "Windows.Terminal.Wsl"
             },
             {
+                "fontFace": "Cascadia Code PL",
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
